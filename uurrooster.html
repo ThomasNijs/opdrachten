@@ -1,0 +1,1217 @@
+<!DOCTYPE html> 
+<html lang="nl"> 
+	<head> 
+		<title> uurroosters </title> 
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+ 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+		<link rel="schortcut icon" tuype="image/png" href="Afbeeldingen/opdracht_uurroosters/favicon.png"> 
+		<link rel="stylesheet" href="C:/Users/hamza/Documents/1EAI/semester 2/webtechnologie/1EAI-WT-pxl-elektronica-ict.be-CSS-file/style.css"> 
+		<style> 
+			/* Remove default bullets */ 
+			ul, #myUL 
+			{ 
+				list-style-type: none; 
+			} 
+ 
+			/* Remove margins and padding from the parent ul */ 
+			#myUL 
+			{ 
+				margin: 0; 
+				padding: 0; 
+			} 
+ 
+			/* Style the caret/arrow */ 
+			.caret 
+			{ 
+				cursor: pointer; 
+				user-select: none; /* Prevent text selection */ 
+			} 
+ 
+			/* Create the caret/arrow with a unicode, and style it */ 
+			.caret::before 
+			{ 
+				content: "\25B6"; 
+				color: black; 
+				display: inline-block; 
+				margin-right: 6px; 
+			} 
+ 
+			/* Rotate the caret/arrow icon when clicked on (using JavaScript) */ 
+			.caret-down::before 
+			{ 
+				transform: rotate(90deg); 
+			} 
+ 
+			/* Hide the nested list */ 
+			.nested 
+			{ 
+				display: none; 
+			} 
+ 
+			/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */ 
+			.active 
+			{ 
+				display: block; 
+			} 
+ 
+			.logo img 
+			{ 
+				float: left; 
+				width: 150px; 
+				height: auto; 
+			} 
+			.button { 
+  background-color: #2C75FF; /* Green */ 
+  border: none; 
+  color: white; 
+  padding: 15px 32px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+	float: right; 
+} 
+ 
+		</style> 
+	</head> 
+ 
+	<body> 
+		<header> 
+			<div class = "header_margin"> 
+				<div class ="header"> 
+					<ul class = "navbar"> 
+						<li><a href="#">Contact</a></li> 
+						<li><a href="#">Webserver</a></li> 
+						<li><a href="#">Uurroosters</a></li> 
+						<li><a href="#">Bachelorproef</a></li> 
+						<li><a href="#">Locatie</a></li> 
+						<li><a href="#">Opleiding</a></li> 
+						<li><a href="pxl_website_index.html">Home</a></li> 
+					</ul> 
+ 
+					<div class="logo_nav"> 
+						<img src="https://github.com/PXLDigital/1EAI-WT-pxl-elektronica-ict.be/blob/CSS-file/logo.jpg?raw=true" 	width= "150px" height = "150px"> 
+					</div> 
+				</div> 
+			</div> 
+		</header> 
+<div class="nocolomn"> 
+		<div class = "container-fluid"> 
+			<h1 style = "text-align:center;"> Uurroosters </h1> 
+			<div class ="row"> 
+				<div class = "col-sm-9"> 
+				<h2> 
+					Digital 
+				</h2> 
+				</div> 
+				<div class = "col-sm-3 text-left"> 
+					<div class ="btn-group"> 
+							<button type="button" class= "button" style="float:left" onclick="reset()"> Reset</button> 
+						<a type="button" class= "button" href="#" > Download de ICS-files</a> 
+					</div> 
+				</div> 
+			</div> 
+			<div class ="row" style = "height:575px;"> 
+				<div class = "col-sm-4"> 
+ 
+						<ul id="myindex"> 
+							<li> 
+								<span class ="caret"> 
+									Electronica-ICT 
+								</span> 
+								<ul class ="nested"> 
+									<li> 
+										<span class = "caret"> 
+										Eerste jaar 
+										</span> 
+										<ul class = "nested"> 
+											<li> 
+												<input type="checkbox" id="algemene_meldingen"  onclick="agenda_update()"> 
+												Algemene mededelingen 
+											</li><!-- wafel --> 
+											<li> 
+												<span class = "caret"> 
+												</span> 
+												<input type="checkbox" id="groepen"  onclick="groepen()"> 
+													Groep A 
+												<ul class ="nested"> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														C-programeren 1 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														C-programeren 2 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Digitale technieken 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Elektronica 1 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Elektronica 2 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Mechatronica 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Netwerken 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Project ontwerpen 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Project technologie 
+														</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														VHDL 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Wiskunde 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Webtechnologie 
+													</li> 
+												</ul> 
+											</li> 
+											<li> 
+												<span class = "caret"> 
+												</span> 
+												<input type="checkbox" id="groepen"  onclick="groepen()"> 
+												Groep B 
+												<ul class ="nested"> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														C-programeren 1 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														C-programeren 2 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Digitale technieken 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Elektronica 1 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Elektronica 2 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Mechatronica 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Netwerken 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Project ontwerpen 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Project technologie 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														VHDL 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Wiskunde 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Webtechnologie 
+													</li> 
+												</ul> 
+											</li> 
+											<li> 
+												<span class = "caret"> 
+												</span> 
+												<input type="checkbox" id="groepen"  onclick="groepen()"> 
+												groep C 
+ 
+												<ul class ="nested"> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														C-programeren 1 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														C-programeren 2 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Digitale technieken 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Elektronica 1 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Elektronica 2 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Mechatronica 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Netwerken 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Project ontwerpen 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Project technologie 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														VHDL 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Wiskunde 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Webtechnologie 
+													</li> 
+												</ul> 
+											</li> 
+											<li> 
+												<span class = "caret"> 
+												</span> 
+												<input type="checkbox" id="groepen"  onclick="groepen()"> 
+												groep D 
+ 
+												<ul class ="nested"> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														C-programeren 1 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														C-programeren 2 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Digitale technieken 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Elektronica 1 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Elektronica 2 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Mechatronica 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Netwerken 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Project ontwerpen 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Project technologie 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														VHDL 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Wiskunde 
+													</li> 
+													<li> 
+														<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+														Webtechnologie 
+													</li> 
+												</ul> 
+											</li> 
+										</ul> 
+									</li> 
+ 
+									<li> <span class="caret">Tweede jaar</span> 
+								 	<ul class="nested"> 
+								 	 <li> 
+									   <input type="checkbox" id="algemene_meldingen"  onclick="agenda_update()"> 
+									  Algemene mededelingen 
+									  </li><!-- wafel --> 
+									 <li><span class="caret"> 
+										 </span> 
+										 <input type="checkbox" id="groepen"  onclick="groepen()"> 
+										 Groep A 
+										 <ul class="nested"> 
+											 <li> 
+												 <input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												 BA 
+											 </li> 
+											 <li> 
+												 <input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												 C++ 
+											 </li> 
+											 <li> 
+											 <input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+											 	ES1 
+										 	</li> 
+											<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												ES2 
+											</li> 
+											<li> 
+											<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+											FPGA 
+											</li> 
+											<li> 
+											<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+											IOT 
+											</li> 
+											<li> 
+											<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+											MC 
+											</li> 
+											<li> 
+											<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+											MSD 
+											</li> 
+											<li> 
+											<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+											NP 
+											</li> 
+											<li> 
+											<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+											PON 
+											</li> 
+											<li> 
+											<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+											POZ 
+											</li> 
+											<li> 
+											<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+											SA 
+											</li> 
+										 </ul> 
+										 <li><span class="caret"></span> 
+											 <input type="checkbox" id="groepen"  onclick="groepen()"> 
+											 Groep B 
+											 <ul class="nested"> 
+												 <li> 
+													 <input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+													 BA 
+												 </li> 
+												 <li> 
+													 <input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+													 C++ 
+												 </li> 
+												 <li> 
+												 <input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												 	ES1 
+											 	</li> 
+												<li> 
+													<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+													ES2 
+												</li> 
+												<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												FPGA 
+												</li> 
+												<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												IOT 
+												</li> 
+												<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												MC 
+												</li> 
+												<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												MSD 
+												</li> 
+												<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												NP 
+												</li> 
+												<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												PON 
+												</li> 
+												<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												POZ 
+												</li> 
+												<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												SA 
+												</li> 
+											 </ul> 
+										 </li> 
+									 </li> 
+								 </ul> 
+								 <li><span class="caret">Derde jaar</span> 
+									 <ul class="nested"> 
+									 <li> 
+									   <input type="checkbox" id="algemene_meldingen"  onclick="agenda_update()"> 
+									  Algemene mededelingen 
+									  </li><!-- wafel --> 
+									 	<li><span class="caret"></span> 
+											<input type="checkbox" id="groepen"  onclick="groepen()"> 
+ 										 Groep A 
+										 <ul class="nested"> 
+										 	<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												DC 
+											</li> 
+											<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												DSP 
+											</li> 
+											<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												EOS 
+											</li> 
+											<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												EP 
+											</li> 
+											<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												IA 
+											</li> 
+											<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												PI 
+											</li> 
+											<li> 
+												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+												SS 
+											</li> 
+										 </ul> 
+										 <li><span class="caret"></span> 
+ 											<input type="checkbox" id="groepen"  onclick="groepen()"> 
+  										 Groep B 
+ 										 <ul class="nested"> 
+ 										 	<li> 
+ 												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+ 												DC 
+ 											</li> 
+ 											<li> 
+ 												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+ 												DSP 
+ 											</li> 
+ 											<li> 
+ 												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+ 												EOS 
+ 											</li> 
+ 											<li> 
+ 												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+ 												EP 
+ 											</li> 
+ 											<li> 
+ 												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+ 												IA 
+ 											</li> 
+ 											<li> 
+ 												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+ 												PI 
+ 											</li> 
+ 											<li> 
+ 												<input type="checkbox" id="checkBox"  onclick="agenda_update()"> 
+ 												SS 
+ 											</li> 
+										</ul> 
+									 </li> 
+									 </ul> 
+	 							</li> 
+								</ul> 
+							</li> 
+						</ul> 
+ 
+ 
+				</div> 
+ 
+					<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBrussels&amp;mode=WEEK&amp;showTitle=0&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" style="height:550px;width:950px;float:right;" id="iframe_agenda"></iframe> 
+				</div> 
+			</div> 
+		</div> 
+		<footer></footer><!--heir staat de footer--> 
+		<script> 
+			var toggler = document.getElementsByClassName("caret"); 
+			var i; 
+ 
+			for (i = 0; i < toggler.length; i++) 
+			{ 
+				toggler[i].addEventListener("click", function() 
+				{ 
+					this.parentElement.querySelector(".nested").classList.toggle("active"); 
+					this.classList.toggle("caret-down"); 
+					agenda_update(); 
+				}); 
+			} 
+ 
+			var aantalVakkenEersteJaar = 12; 
+			var aantalVakkenDerdeJaar = 7; 
+ 
+			function reset() 
+			{ 
+				var checkBox = document.querySelectorAll("input[id=checkBox]"); 
+				var groepen = document.querySelectorAll("input[id=groepen]"); 
+ 
+				for(var i = 0; i<checkBox.length; i++) 
+				{ 
+					checkBox[i].checked = false; 
+				} 
+ 
+				for(var i = 0; i<groepen.length; i++) 
+				{ 
+					<!-- console.log(i); --> 
+					groepen[i].checked = false; 
+				} 
+				agenda_update(); 
+			} 
+ 
+			function groepen() 
+			{ 
+				var checkBox = document.querySelectorAll("input[id=checkBox]"); 
+				var groepen = document.querySelectorAll("input[id=groepen]"); 
+				var i,j; 
+ 
+ 
+			 	<!-- console.log(checkBox.length); --> 
+				<!-- console.log(groepen.length); --> 
+ 
+				for(i = 0; i<groepen.length;i++) 
+				{ 
+					if(groepen[i].checked == true) 
+					{ 
+						<!-- console.log(i); --> 
+						if(i<6) 
+						{ 
+                        for(j = i*aantalVakkenEersteJaar;j<(i+1)*aantalVakkenEersteJaar;j++) 
+						 { 
+							<!-- console.log(j); --> 
+							checkBox[j].checked = true; 
+						 } 
+						} 
+						else 
+						{ 
+						 for(j = (6*aantalVakkenEersteJaar) + ((i-6)*aantalVakkenDerdeJaar);j<(6*aantalVakkenEersteJaar)+((i-5)*aantalVakkenDerdeJaar);j++) 
+						 { 
+							<!-- console.log(j); --> 
+							checkBox[j].checked = true; 
+						 } 
+ 
+						} 
+ 
+					} 
+					else 
+					{ 
+						if(i<6) 
+						{ 
+                        for(j = i*aantalVakkenEersteJaar;j<(i+1)*aantalVakkenEersteJaar;j++) 
+						 { 
+							<!-- console.log(j); --> 
+							checkBox[j].checked = false; 
+						 } 
+						} 
+						else 
+						{ 
+						 for(j = (6*aantalVakkenEersteJaar) + ((i-6)*aantalVakkenDerdeJaar);j<(6*aantalVakkenEersteJaar)+((i-5)*aantalVakkenDerdeJaar);j++) 
+						 { 
+							<!-- console.log(j); --> 
+							checkBox[j].checked = false; 
+						 } 
+ 
+						} 
+						<!-- console.log(i); --> 
+					} 
+				} 
+				agenda_update(); 
+			} 
+ 
+			function agenda_update() 
+			{ 
+				var link; 
+				var exit; 
+				var checkBox = document.querySelectorAll("input[id=checkBox]"); 
+				var groepen = document.querySelectorAll("input[id=groepen]"); 
+				var algemeen = document.querySelectorAll("input[id=algemene_meldingen]"); 
+				var agenda = document.getElementById("iframe_agenda"); 
+				var basisLink = "https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FBrussels&mode=WEEK&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0"; 
+				var algemene_agenda = [ 
+					"&src=cXJycHZnMDZ1OWVjZWdzc2g3aXZocDZjM3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", /*Algemene mededeling Eerste jaar*/ 
+                    "&src=bW0ybXVqbWpqMmU5MDBzbnI4MWg1NXFqanNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", /*Algemene mededeling Tweede jaar*/ 
+                    "&src=OGEyM25zcTNkOWoyOWZqaGhwbHFnbGhtcmtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000" ]; /*Algemene mededeling Derde jaar*/ 
+				var vakken = [ 
+				"&src=YjFyNXBsNnB0dHR1czhvMGQwZHU1czVjZTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=aWNhMHNocGQwZ2xxc2ZnbWExb2NvMjJrMWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cTRpdHFpMHV0OTdtbmVkNGFiMmw3bmxxMDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dXNuOTlkNDkzMmxpNnI2MWp2aGNvNGZxNzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=NmEwZjlidmp1b2hxMjdtdWp2Y3YwanVlN2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=bWcwb2JrN2IwMW12cDVqbmtiMWRlYTltMXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=NW0xbG5kdW9zNGwxNm1zZDYycjdsMTkwYXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dmNxbGplNW5udTExdXVvbjlmNG9vaDVyMG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=MnBxc3VnYXBzbzg2MzBmbzlsaW82MjZnN2dAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=aW0zODAzNXVoanY2a2o3c2JrNmZmc2s5YjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dmpkYmxuNDFjbGU0aG4xMHJvc2g4dHNhZzBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=b3ZqZGp0c2lydmU1cTZwdmM2Y2Rka211cW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=ZnIwMnZzaGUzOGtkNDZqNzJrMmU4ZWQxaTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=Z21uNTVscmc1MnMxMGtqNzYzbGt0b2s2djBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=b3NjN3MwZmZzbWxsODJocGlsbjFkdGNhZjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dnZwNWc2OXNtZG1scGFtdmc0bGJra3ExZGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=MzgwaHBudTlmdjlqY21ubDhyc2pqaGQ4YmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=NjAxczVlaHJtNnMwZTduaXFuam10ODJuMW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dHZtYTdjdW43YjhiNmU5ZnNtc3UxMGlhMm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=bmZlMTkwNnBzNXYwZTg5aDJzcGN1MDhqYTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=bjlvMzh1bzhyZTgya3NoNXFzazd2MGhsOTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=MjhhZ3ZsNXZqcnNyN21zcmp0ODc2c3IxNG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=ODJjYzhraGhsZnZldHUxMjZiYmR0a2E2ZTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=bTcxYnV1cGM5ZDBuNnR2dmZsZ21oaXJxbG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cXVwcjE1NnJuaXE1cjVqZmJoNW50dGJuMmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cWF0NHI1MHRpNjN2dWZxZGR0bjRjYzg2MWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=Yzlvbm9kc3UyZWQ1ZWV0OTFwbmtqcHZ1aGdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=aG85MnJoa281MTFmNGFkY2ViZTBzZjB1cWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cW50dXVyZWowbmtsYjE1dHFtc2FqZGcycGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dWNnMGZqOW12MWVza2QwdnBqOGNiczViNjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=a2dxN2lwbGQ1c3IyajZtYWU0Z2VtdDYzbmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=YTBxcWhoc2Z0b2lmZTl1a2ZzZG5kMWRzMDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=bjVqYXQ4OG8xdWNzNnI3NTk0Z2podXA4YzRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cDZsb240Yzdsa2luamRybWExYThoMGdqb3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cjRlaGwwZG0zZHUxZmhvMzNnZW9wZG1iY2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cjFhbTA5bHJnMm5tMzFnMGJpczNhbWI4dDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=bm0xbzQyZ2dlbzliMnBxZ2FyczY5OWZxYmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=YnFlZWV1OHRyaHA3YTE4aWhnMHZkcGRuZzRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dG85N2FkbW1kZ2Z2c2tjZ3Q4NjFhY3FvOHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=ZTNhZ3M5ZmN0cThqOXEwMThycWJ1OTVva2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=NGRuNTA0MjhxMXZoYnU3NW1pampmZG5jYThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dmNocmk2ZWxvNHZzOTNnYWlnZHZmczlwdjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=NHA0ZW1jaWQ5aW9ybHVnamhqOGg2bG5ldmdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=OGVhYjIyNGJlajMzcDhudHVhMzFlNWx2Ym9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=MjVyaDM4MWtwZmxvYmY1NjJ2aDhrZHBzNzBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=M3U0ZGttc3E0b2FxanFpM2MxZWFoZ2Y4azBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dWUzMGV2cW9zZ2lwN3Via3ZwZ2hubTA4NThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=OW5vdmhvbHFiaTZyODhsZzk2MDl2Z3JscDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", /*Einde Vakken eerste jaar */ 
+                "&src=dnVzaXRxNTIxM25idDlmaG4xcG1nbWdqb3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dTFlNWRsYTJkMWE1b2kyMmJucDYwYnE2Ym9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cGliYmZoam5uaWhtOGhqbnZ2YTFnZjhiM2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=MXRuajFsbzMwa3A0aGdqdmNuNHAxaGpyZW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=bDY0amNtZGtwNmlpMmpiazViNWUwZ25qbTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=bTdxdWdkNzY0Zmpxc2toNmtkY2o0dnN1MThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=YThzcGcyazI1c3E4NmcxOWNzcjluOW1xcGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=ZjlndXJxc29iM3Jhc2hjZWJubTBwZnR1YThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=OTJtb2Jnc3BoaXRyZWpqNjVyYmMzdTVjMXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=b2MxYzltdDZxdGIwaDNwYmdxZ2xnaXVndG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=aHRzcTllbzRqODc3OG1mdGVnNDU1OGQwdXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=aWp2cG92dmxlYzdocjhnbWVwZjZocDY3ZDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=MHU5dGw5amNjZWQzOWgzNDNpZm4ybWhtcDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=ODFiNTdka2NrZmlqbjB2a2pybGQzanJ0OHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=NW9iZG84cXQxMWdlOHNtaWRmbmM2c2lyaGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=YTZ2ZG8yaGVjNTF2N2Nsb2M2dTRiZXZjcHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=bGdqcGFnYjZkODhsMWZlcGFiOWZmMTlqNjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=aHEyMzhsNzZsbzdmdG1iZW4zMWZpbDE2NDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=bG0wdGdsNmNqYjFva2g4aXMyZG1wZWM1cnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cGhvMDdiY285MWc5OHQ1NmlldGQ1YmxqZ2dAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=ZTZwODlvajY0NDZtMzExbXJra29tNnRxYjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=ZnVlNGlmZ3E4czUzcHZhamIwNm8xZ2xhOHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cjRrdXZjOGMzazR0ZjQ0NTV2ZDQ2ZzVoZTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=Y2V2Z2o0MmtlZ3E3b2xzMHNzcTRzbWw5bGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", /*Einde vakken Tweede jaar*/ 
+                "&src=M2NhbzZnODdmcGgwMHZwOTNhNHM5cGs3a3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=N3VtcDBzZm0zN3ZxdXMxYmlrb2c0bnBkNWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=N3Blb3ZyNmdrcjNxbTZuZzI1NDkydjkyNHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cWphcTNrb3VrbmtybDRzcTRwYmN1Z2duMGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=Y3Fjc2sxc2M1NWl2NGV2YmdsNDVpZDB1NDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=MzFqZjllbnJoNjg3dmU1dnJrbzdnMHUwdm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dnZ2c2hxZXVnY21lN2RucTBuMjltOHNhdThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=bW4yaHBxY2ZhazM4NXBqc25hN2c2bTRsbTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=ajQxajJwOXRxMXJwZjQ1c2ZnNThnbmtqOTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dGFnb2doNTRsbnZuaHBuNXRwazY2YTRzc3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=MmtuMmFnNnJ0Mjc4aTdzYnVqMTM2NDcxY2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=Y2pjbzN2dWVzbmxxZG10YzFlY3I2ZXM4NWdAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=Z3E4cTBoMDljYW01bWdiazNrdWdraTRrdDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=dWtwNDBnaDFjbGZjcDd0cWg2ZnVubnZxN2dAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", /*Einde vakken Derde jaar*/ 
+                "&src=MjJuZnNycGZuczFpZGZhMGR2NWRqMGVqZ2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000", 
+                "&src=cWVrNTBycDI0bDV1cGFjY2FuYnVpdTVoZHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23FF0000"]; /*Einde vakken Bachelorproef*/ 
+ 
+				link = basisLink; 
+ 
+				for(var i = 0; i<groepen.length;i++) 
+				{ 
+					<!-- console.log(i); --> 
+					exit = false; 
+					<!-- console.log(exit); --> 
+					if(i<6) 
+					{ 
+						for(var j = i*aantalVakkenEersteJaar;j<(i+1)*aantalVakkenEersteJaar && exit == false;j++) 
+						{ 
+							<!-- console.log(j); --> 
+							<!-- console.log(i); --> 
+							if(checkBox[j].checked == false) 
+							{ 
+								exit = true; 
+							} 
+							<!-- console.log(exit); --> 
+						} 
+						if (exit == true) 
+						{ 
+							groepen[i].checked = false; 
+						} 
+						else 
+						{ 
+							groepen[i].checked = true; 
+						} 
+					} 
+					else 
+					{ 
+						for(j = (6*aantalVakkenEersteJaar) + ((i-6)*aantalVakkenDerdeJaar);j<(6*aantalVakkenEersteJaar)+((i-5)*aantalVakkenDerdeJaar) && exit == false;j++) 
+						{ 
+							<!-- console.log(j); --> 
+							<!-- console.log(i); --> 
+							if(checkBox[j].checked == false) 
+							{ 
+								exit = true; 
+							} 
+							<!-- console.log(exit); --> 
+						} 
+						if (exit == true) 
+						{ 
+							groepen[i].checked = false; 
+						} 
+						else 
+						{ 
+							groepen[i].checked = true; 
+						} 
+					} 
+					<!-- console.log(exit); --> 
+ 
+				} 
+ 
+				for(var i = 0; i<algemeen.length;i++) 
+				{ 
+					if(algemeen[i].checked == true) 
+					{ 
+						link = link.concat(algemene_agenda[i]); 
+					} 
+				} 
+ 
+				for (var i = 0; i<checkBox.length;i++) 
+				{ 
+					if(checkBox[i].checked == true) 
+					{ 
+						link = link.concat(vakken[i]); 
+						<!-- console.log(i); --> 
+					} 
+				} 
+				<!-- console.log(link); --> 
+				agenda.src = link; 
+			} 
+				$('a.yourlink').click(function(e) 
+				{ 
+					var checkBox = document.querySelectorAll("input[id=checkBox]"); 
+					var algemeen = document.querySelectorAll("input[id=algemene_meldingen]"); 
+				    e.preventDefault(); 
+				    //Eerste jaar 
+				    	if(algemeen[0].checked == true) 
+						{ 
+							window.open('https://ical.pxl-ea-ict.be/eai/1.ics'); 
+						} 
+							//Groep A 
+							if(checkBox[0].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/cp1.ics'); 
+							} 
+							if(checkBox[1].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/cp2.ics'); 
+							} 
+							if(checkBox[2].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/dt.ics'); 
+							} 
+							if(checkBox[3].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/ea1.ics'); 
+							} 
+							if(checkBox[4].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/ea2.ics'); 
+							} 
+							if(checkBox[5].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/mech.ics'); 
+							} 
+							if(checkBox[6].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/net.ics'); 
+							} 
+							if(checkBox[7].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/pow.ics'); 
+							} 
+							if(checkBox[8].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/pt.ics'); 
+							} 
+							if(checkBox[9].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/vhdl.ics'); 
+							} 
+							if(checkBox[10].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/wisk.ics'); 
+							} 
+							if(checkBox[11].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/a/wt.ics'); 
+							} 
+							//Groep B 
+							if(checkBox[12].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/cp1.ics'); 
+							} 
+							if(checkBox[13].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/cp2.ics'); 
+							} 
+							if(checkBox[14].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/dt.ics'); 
+							} 
+							if(checkBox[15].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/ea1.ics'); 
+							} 
+							if(checkBox[16].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/ea2.ics'); 
+							} 
+							if(checkBox[17].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/mech.ics'); 
+							} 
+							if(checkBox[18].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/net.ics'); 
+							} 
+							if(checkBox[19].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/pow.ics'); 
+							} 
+							if(checkBox[20].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/pt.ics'); 
+							} 
+							if(checkBox[21].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/vhdl'); 
+							} 
+							if(checkBox[22].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/wisk.ics'); 
+							} 
+							if(checkBox[23].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/b/wt.ics'); 
+							} 
+							//Groep C 
+							if(checkBox[24].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/cp1.ics'); 
+							} 
+							if(checkBox[25].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/cp2.ics'); 
+							} 
+							if(checkBox[26].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/dt.ics'); 
+							} 
+							if(checkBox[27].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/ea1.ics'); 
+							} 
+							if(checkBox[28].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/ea2.ics'); 
+							} 
+							if(checkBox[29].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/mech.ics'); 
+							} 
+							if(checkBox[30].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/net.ics'); 
+							} 
+							if(checkBox[31].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/pow.ics'); 
+							} 
+							if(checkBox[32].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/pt.ics'); 
+							} 
+							if(checkBox[33].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/vhdl'); 
+							} 
+							if(checkBox[34].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/wisk.ics'); 
+							} 
+							if(checkBox[35].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/c/wt.ics'); 
+							} 
+							//Groep D 
+							if(checkBox[36].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/cp1.ics'); 
+							} 
+							if(checkBox[37].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/cp2.ics'); 
+							} 
+							if(checkBox[38].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/dt.ics'); 
+							} 
+							if(checkBox[39].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/ea1.ics'); 
+							} 
+							if(checkBox[40].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/ea2.ics'); 
+							} 
+							if(checkBox[41].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/mech.ics'); 
+							} 
+							if(checkBox[42].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/net.ics'); 
+							} 
+							if(checkBox[43].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/pow.ics'); 
+							} 
+							if(checkBox[44].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/pt.ics'); 
+							} 
+							if(checkBox[45].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/vhdl'); 
+							} 
+							if(checkBox[46].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/wisk.ics'); 
+							} 
+							if(checkBox[47].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/1/d/wt.ics'); 
+							} 
+					//tweede jaar 
+					if(algemeen[1].checked == true) 
+						{ 
+							window.open('https://ical.pxl-ea-ict.be/eai/2.ics'); 
+						} 
+						    //Groep A 
+							if(checkBox[48].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/ba.ics'); 
+							} 
+							if(checkBox[49].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/c++.ics'); 
+							} 
+							if(checkBox[50].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/es1.ics'); 
+							} 
+							if(checkBox[51].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/es2.ics'); 
+							} 
+							if(checkBox[52].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/fpga.ics'); 
+							} 
+							if(checkBox[53].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/iot.ics'); 
+							} 
+							if(checkBox[54].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/mc.ics'); 
+							} 
+							if(checkBox[55].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/msd.ics'); 
+							} 
+							if(checkBox[56].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/np.ics'); 
+							} 
+							if(checkBox[57].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/pon.ics'); 
+							} 
+							if(checkBox[58].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/poz.ics'); 
+							} 
+							if(checkBox[59].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/a/sa.ics'); 
+							} 
+						    //Groep B 
+							if(checkBox[60].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/ba.ics'); 
+							} 
+							if(checkBox[61].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/c++.ics'); 
+							} 
+							if(checkBox[62].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/es1.ics'); 
+							} 
+							if(checkBox[63].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/es2.ics'); 
+							} 
+							if(checkBox[64].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/fpga.ics'); 
+							} 
+							if(checkBox[65].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/iot.ics'); 
+							} 
+							if(checkBox[66].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/mc.ics'); 
+							} 
+							if(checkBox[67].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/msd.ics'); 
+							} 
+							if(checkBox[68].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/np.ics'); 
+							} 
+							if(checkBox[69].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/pon.ics'); 
+							} 
+							if(checkBox[70].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/poz.ics'); 
+							} 
+							if(checkBox[71].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/2/b/sa.ics'); 
+							} 
+					//derde jaar 
+					if(algemeen[2].checked == true) 
+						{ 
+							window.open('https://ical.pxl-ea-ict.be/eai/3.ics'); 
+						} 
+						    //Groep A 
+							if(checkBox[72].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/a/dc.ics'); 
+							} 
+							if(checkBox[73].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/a/dsp.ics'); 
+							} 
+							if(checkBox[74].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/a/eos.ics'); 
+							} 
+							if(checkBox[75].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/a/ep.ics'); 
+							} 
+							if(checkBox[76].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/a/ia.ics'); 
+							} 
+							if(checkBox[77].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/a/pi.ics'); 
+							} 
+							if(checkBox[78].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/a/ss.ics'); 
+							} 
+						    //Groep B 
+							if(checkBox[79].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/b/dc.ics'); 
+							} 
+							if(checkBox[80].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/b/dsp.ics'); 
+							} 
+							if(checkBox[81].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/b/eos.ics'); 
+							} 
+							if(checkBox[82].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/b/ep.ics'); 
+							} 
+							if(checkBox[83].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/b/ia.ics'); 
+							} 
+							if(checkBox[84].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/b/pi.ics'); 
+							} 
+							if(checkBox[85].checked == true) 
+							{ 
+								window.open('https://ical.pxl-ea-ict.be/eai/3/b/ss.ics'); 
+							} 
+ 
+ 
+ 
+}); 
+		</script> 
+ 
+	</div> 
+	</body> 
+</html>
